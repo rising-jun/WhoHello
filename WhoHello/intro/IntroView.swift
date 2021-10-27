@@ -13,9 +13,10 @@ class IntroView: BaseView{
     
     lazy var titleLabel: UILabel = {
        let label = UILabel()
-        label.text = ""
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 24)
+        label.text = "누구세요?"
+        label.textColor = .systemPink
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 26)
         return label
     }()
 
@@ -31,13 +32,20 @@ class IntroView: BaseView{
     override func setup() {
         super.setup()
         
-        backgroundColor = .yellow
+        backgroundColor = .cyan
         addSubViews(titleLabel, titleIV, animationView)
         
         //animationView.backgroundColor = .white
         animationView.snp.makeConstraints { make in
             make.center.equalTo(self)
             make.width.height.equalTo(150)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(animationView.snp.bottom).offset(20)
+            make.width.equalTo(200)
+            make.height.equalTo(40)
+            make.centerX.equalTo(self)
         }
         
         

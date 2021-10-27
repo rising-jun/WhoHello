@@ -1,36 +1,27 @@
 //
-//  IntroViewModel.swift
+//  LookViewModel.swift
 //  WhoHello
 //
-//  Created by 김동준 on 2021/10/19.
+//  Created by 김동준 on 2021/10/27.
 //
 
 import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ViewModelType: class{
-    associatedtype Input
-    associatedtype Output
-    
-    var input: Input? { get }
-    var output: Output? { get }
-}
-
-final class IntroViewModel: ViewModelType{
+final class LookViewModel: ViewModelType{
     var input: Input?
     var output: Output?
     
-    private let state = BehaviorRelay<IntroState>(value: IntroState())
+    private let state = BehaviorRelay<LookState>(value: LookState())
     
     struct Input{
         let timeOver: Observable<Bool>?
         let viewState: Observable<ViewState>?
-        let vcName: Observable<VCName>?
     }
     
     struct Output{
-        var state: Driver<IntroState>?
+        var state: Driver<LookState>?
     }
     
     private let disposeBag = DisposeBag()
@@ -39,7 +30,7 @@ final class IntroViewModel: ViewModelType{
         self.input = input
 
         input.timeOver?
-            .withLatestFrom(state){ done, state -> IntroState in
+            .withLatestFrom(state){ done, state -> LookState in
                 var newState = state
                 newState.presentVC = .login
                 return newState
@@ -48,7 +39,7 @@ final class IntroViewModel: ViewModelType{
             
         input.viewState?
             .filter{$0 == .viewDidLoad}
-            .withLatestFrom(state){ viewState, state -> IntroState in
+            .withLatestFrom(state){ viewState, state -> LookState in
                 var newState = state
                 newState.viewLogic = .setUpView
                 return newState
@@ -64,15 +55,11 @@ final class IntroViewModel: ViewModelType{
 
 
 
-struct IntroState{
+struct LookState{
     var vcName: VCName?
     var presentVC: PresentVC?
     var timeOver: Bool?
     var viewLogic: ViewLogic?
     
     
-}
-
-enum ViewLogic{
-    case setUpView
 }

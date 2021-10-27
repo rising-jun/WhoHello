@@ -73,7 +73,7 @@ extension IntroViewController{
             loginVC.modalPresentationStyle = .fullScreen
             present(loginVC, animated: true, completion: nil)
         break
-        case .main:
+        case .look:
             //present(IntroViewController(), animated: true, completion: nil)
         break
         }

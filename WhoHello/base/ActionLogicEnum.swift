@@ -17,7 +17,7 @@ enum VCName{
 enum PresentVC{
     case intro
     case login
-    case main
+    case look
 }
 
 enum ViewState{

@@ -14,17 +14,19 @@ final class LoginViewModel: ViewModelType{
     var output: Output?
     
     private let state = BehaviorRelay<LoginState>(value: LoginState())
+    private let disposeBag = DisposeBag()
+    private var tokenPublish = PublishSubject<String>()
+    let googleLoginModel = GoogleLoginToken()
     
     struct Input{
         let viewState: Observable<ViewState>?
-        let vcName: Observable<VCName>?
+        let googleLoginTap: Observable<Void>?
+        
     }
     
     struct Output{
         var state: Driver<LoginState>?
     }
-    
-    private let disposeBag = DisposeBag()
     
     func bind(input: Input) -> Output{
         self.input = input
@@ -38,6 +40,20 @@ final class LoginViewModel: ViewModelType{
             }.bind(to: self.state)
             .disposed(by: disposeBag)
         
+        input.googleLoginTap?
+            .withLatestFrom(state)
+            .map{ [weak self] state -> LoginState in
+                var newState = state
+                self?.getGoogleToken()
+                self!.tokenPublish.bind { [weak self] val in
+                    UserDefaults.standard.setValue(val, forKey: "token")
+                    newState.userToken = val
+                    newState.presentVC = .main
+                }.disposed(by: self!.disposeBag)
+                return newState
+            }.bind(to: self.state)
+        
+        
         output = Output(state: state.asDriver())
         return output!
     }
@@ -45,18 +61,18 @@ final class LoginViewModel: ViewModelType{
     
 }
 
-
-
 struct LoginState{
     var presentVC: PresentVC?
     var viewLogic: ViewLogic?
+    var userToken: String?
     
 }
 
-
-enum LoginAction{
-    case timeOver
-    case vcName
+extension LoginViewModel{
+    
+    func getGoogleToken(){
+        self.googleLoginModel.tokenPublish = self.tokenPublish
+        googleLoginModel.getGoogleToken()
+    }
+    
 }
-
-

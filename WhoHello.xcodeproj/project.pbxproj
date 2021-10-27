@@ -10,6 +10,11 @@
 		7267F8532729348C007D3432 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F8522729348C007D3432 /* LoginViewController.swift */; };
 		7267F8552729353A007D3432 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F8542729353A007D3432 /* LoginView.swift */; };
 		7267F85727293581007D3432 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F85627293581007D3432 /* LoginViewModel.swift */; };
+		7267F85B27293FFB007D3432 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7267F85A27293FFB007D3432 /* GoogleService-Info.plist */; };
+		7267F85D2729445C007D3432 /* GoogleLoginToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F85C2729445C007D3432 /* GoogleLoginToken.swift */; };
+		7267F85F27295508007D3432 /* LookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F85E27295508007D3432 /* LookViewController.swift */; };
+		7267F86227295517007D3432 /* LookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F86127295517007D3432 /* LookView.swift */; };
+		7267F86427295557007D3432 /* LookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F86327295557007D3432 /* LookViewModel.swift */; };
 		727FF1A5271E78B000BD2524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727FF1A4271E78B000BD2524 /* AppDelegate.swift */; };
 		727FF1A9271E78B000BD2524 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727FF1A8271E78B000BD2524 /* IntroViewController.swift */; };
 		727FF1AE271E78B100BD2524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727FF1AD271E78B100BD2524 /* Assets.xcassets */; };
@@ -27,6 +32,11 @@
 		7267F8522729348C007D3432 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7267F8542729353A007D3432 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7267F85627293581007D3432 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7267F85A27293FFB007D3432 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7267F85C2729445C007D3432 /* GoogleLoginToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginToken.swift; sourceTree = "<group>"; };
+		7267F85E27295508007D3432 /* LookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookViewController.swift; sourceTree = "<group>"; };
+		7267F86127295517007D3432 /* LookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookView.swift; sourceTree = "<group>"; };
+		7267F86327295557007D3432 /* LookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookViewModel.swift; sourceTree = "<group>"; };
 		727FF1A1271E78B000BD2524 /* WhoHello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoHello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727FF1A4271E78B000BD2524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727FF1A8271E78B000BD2524 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +70,19 @@
 				7267F8522729348C007D3432 /* LoginViewController.swift */,
 				7267F8542729353A007D3432 /* LoginView.swift */,
 				7267F85627293581007D3432 /* LoginViewModel.swift */,
+				7267F85C2729445C007D3432 /* GoogleLoginToken.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		7267F8602729550D007D3432 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				7267F85E27295508007D3432 /* LookViewController.swift */,
+				7267F86127295517007D3432 /* LookView.swift */,
+				7267F86327295557007D3432 /* LookViewModel.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		727FF198271E78B000BD2524 = {
@@ -85,6 +106,7 @@
 		727FF1A3271E78B000BD2524 /* WhoHello */ = {
 			isa = PBXGroup;
 			children = (
+				7267F8602729550D007D3432 /* main */,
 				7267F85127293480007D3432 /* login */,
 				72921141271E892100F69D89 /* intro */,
 				727FF1B8271E87ED00BD2524 /* base */,
@@ -93,6 +115,7 @@
 				7292114A271E972D00F69D89 /* heartlottie.json */,
 				727FF1AF271E78B100BD2524 /* LaunchScreen.storyboard */,
 				727FF1B2271E78B100BD2524 /* Info.plist */,
+				7267F85A27293FFB007D3432 /* GoogleService-Info.plist */,
 			);
 			path = WhoHello;
 			sourceTree = "<group>";
@@ -193,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				727FF1B1271E78B100BD2524 /* LaunchScreen.storyboard in Resources */,
+				7267F85B27293FFB007D3432 /* GoogleService-Info.plist in Resources */,
 				7292114B271E972D00F69D89 /* heartlottie.json in Resources */,
 				727FF1AE271E78B100BD2524 /* Assets.xcassets in Resources */,
 			);
@@ -248,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7267F8532729348C007D3432 /* LoginViewController.swift in Sources */,
+				7267F86227295517007D3432 /* LookView.swift in Sources */,
+				7267F85F27295508007D3432 /* LookViewController.swift in Sources */,
 				72921143271E896A00F69D89 /* IntroView.swift in Sources */,
+				7267F86427295557007D3432 /* LookViewModel.swift in Sources */,
+				7267F85D2729445C007D3432 /* GoogleLoginToken.swift in Sources */,
 				727FF1A9271E78B000BD2524 /* IntroViewController.swift in Sources */,
 				72921145271E8AA900F69D89 /* IntroViewModel.swift in Sources */,
 				727FF1BA271E883500BD2524 /* BaseClasses.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  MainViewController.swift
 //  WhoHello
 //
 //  Created by 김동준 on 2021/10/27.
@@ -10,13 +10,12 @@ import RxSwift
 import RxViewController
 import RxGesture
 
-class LoginViewController: BaseViewController {
+class LookViewController: BaseViewController {
     
-    lazy var v = LoginView(frame: view.frame)
+    lazy var v = LookView(frame: view.frame)
     let viewModel = LoginViewModel()
     private let disposeBag = DisposeBag()
     
-    let lookVC = LookViewController()
     
     
     override func viewDidLoad() {
@@ -53,7 +52,7 @@ class LoginViewController: BaseViewController {
     }
     
 }
-extension LoginViewController{
+extension LookViewController{
     
     func setUpView(){
         view = v
@@ -70,8 +69,7 @@ extension LoginViewController{
             //present(LoginViewController(), animated: true, completion: nil)
         break
         case .look:
-            lookVC.modalPresentationStyle = .fullScreen
-            present(lookVC, animated: true, completion: nil)
+            present(, animated: true, completion: nil)
         break
         }
     }
