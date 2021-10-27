@@ -21,32 +21,32 @@ class LookViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        view = v
         
         
     }
-    
-    private lazy var input = LoginViewModel.Input(viewState: rx.viewDidLoad.map{ViewState.viewDidLoad},
-                                                  googleLoginTap: self.v.googleBtn.rx.tapGesture().skip(1).map{ _ in return Void()} )
-    private lazy var output = viewModel.bind(input: input)
-    
-    
+//
+//    private lazy var input = LoginViewModel.Input(viewState: rx.viewDidLoad.map{ViewState.viewDidLoad},
+//                                                  googleLoginTap: self.v.googleBtn.rx.tapGesture().skip(1).map{ _ in return Void()} )
+//    private lazy var output = viewModel.bind(input: input)
+//
+//
     override func bindViewModel(){
         super.bindViewModel()
         
-        output.state?.map{$0.viewLogic}
-            .filter{$0 == .setUpView}
-            .distinctUntilChanged()
-            .drive(onNext: { [weak self] logic in
-            self?.setUpView()
-        }).disposed(by: disposeBag)
-        
-        output.state?.map{$0.presentVC ?? .login}
-            .distinctUntilChanged()
-            .drive(onNext: { [weak self] presentVC in
-            self?.presentVC(vcName: presentVC)
-        }).disposed(by: disposeBag)
-        
+//        output.state?.map{$0.viewLogic}
+//            .filter{$0 == .setUpView}
+//            .distinctUntilChanged()
+//            .drive(onNext: { [weak self] logic in
+//            self?.setUpView()
+//        }).disposed(by: disposeBag)
+//
+//        output.state?.map{$0.presentVC ?? .login}
+//            .distinctUntilChanged()
+//            .drive(onNext: { [weak self] presentVC in
+//            self?.presentVC(vcName: presentVC)
+//        }).disposed(by: disposeBag)
+//
     
         
     }
@@ -69,7 +69,7 @@ extension LookViewController{
             //present(LoginViewController(), animated: true, completion: nil)
         break
         case .look:
-            present(, animated: true, completion: nil)
+            //present(, animated: true, completion: nil)
         break
         }
     }

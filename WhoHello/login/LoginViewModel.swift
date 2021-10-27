@@ -45,11 +45,13 @@ final class LoginViewModel: ViewModelType{
             .map{ [weak self] state -> LoginState in
                 var newState = state
                 self?.getGoogleToken()
-                self!.tokenPublish.bind { [weak self] val in
-                    UserDefaults.standard.setValue(val, forKey: "token")
-                    newState.userToken = val
-                    newState.presentVC = .main
-                }.disposed(by: self!.disposeBag)
+                self!.tokenPublish.map{
+                    UserDefaults.standard.setValue($0, forKey: "token")
+                    newState.userToken = $0
+                    newState.presentVC = .look
+                    return newState
+                }.bind(to: self!.state)
+                .disposed(by: self!.disposeBag)
                 return newState
             }.bind(to: self.state)
         

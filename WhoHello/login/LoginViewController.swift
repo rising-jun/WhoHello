@@ -17,7 +17,8 @@ class LoginViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     
     let lookVC = LookViewController()
-    
+    lazy var friendVC = FriendViewController()
+    lazy var nav = UINavigationController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,8 +71,21 @@ extension LoginViewController{
             //present(LoginViewController(), animated: true, completion: nil)
         break
         case .look:
-            lookVC.modalPresentationStyle = .fullScreen
-            present(lookVC, animated: true, completion: nil)
+            print("!")
+            let tabBar = UITabBarController()
+            tabBar.modalPresentationStyle = .fullScreen
+            
+            tabBar.addChild(lookVC)
+            nav.addChild(friendVC)
+            
+            tabBar.addChild(nav)
+            
+            nav.modalPresentationStyle = .fullScreen
+            
+            self.lookVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(), tag: 0)
+            self.nav.tabBarItem = UITabBarItem(title: "내친구", image: UIImage(), tag: 1)
+            self.present(tabBar, animated: true, completion: nil)
+            
         break
         }
     }
