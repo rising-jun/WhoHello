@@ -18,6 +18,8 @@ enum PresentVC{
     case intro
     case login
     case look
+    case myInfo
+    case friend
 }
 
 enum ViewState{

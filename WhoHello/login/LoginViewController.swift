@@ -62,16 +62,7 @@ extension LoginViewController{
     }
     
     func presentVC(vcName: PresentVC){
-        switch vcName {
-            
-        case .intro:
-            //present(IntroViewController(), animated: true, completion: nil)
-        break
-        case .login:
-            //present(LoginViewController(), animated: true, completion: nil)
-        break
-        case .look:
-            print("!")
+        if vcName == .look{
             let tabBar = UITabBarController()
             tabBar.modalPresentationStyle = .fullScreen
             
@@ -85,9 +76,9 @@ extension LoginViewController{
             self.lookVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(), tag: 0)
             self.nav.tabBarItem = UITabBarItem(title: "내친구", image: UIImage(), tag: 1)
             self.present(tabBar, animated: true, completion: nil)
-            
-        break
+        
         }
+        
     }
     
 }

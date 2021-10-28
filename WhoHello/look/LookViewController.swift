@@ -60,18 +60,7 @@ extension LookViewController{
     }
     
     func presentVC(vcName: PresentVC){
-        switch vcName {
-            
-        case .intro:
-            //present(IntroViewController(), animated: true, completion: nil)
-        break
-        case .login:
-            //present(LoginViewController(), animated: true, completion: nil)
-        break
-        case .look:
-            //present(, animated: true, completion: nil)
-        break
-        }
+        
     }
     
 }

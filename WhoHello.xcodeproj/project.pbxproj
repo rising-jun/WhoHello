@@ -25,6 +25,12 @@
 		72921145271E8AA900F69D89 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72921144271E8AA900F69D89 /* IntroViewModel.swift */; };
 		72921147271E8D6500F69D89 /* ActionLogicEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72921146271E8D6500F69D89 /* ActionLogicEnum.swift */; };
 		7292114B271E972D00F69D89 /* heartlottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 7292114A271E972D00F69D89 /* heartlottie.json */; };
+		72CD1915272A756C00863F68 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD1914272A756C00863F68 /* FriendView.swift */; };
+		72CD1917272A781E00863F68 /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD1916272A781E00863F68 /* FriendViewModel.swift */; };
+		72CD191A272A840F00863F68 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD1919272A840F00863F68 /* MyInfoViewController.swift */; };
+		72CD191C272A841D00863F68 /* MyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD191B272A841D00863F68 /* MyInfoView.swift */; };
+		72CD191E272A85D300863F68 /* MyInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD191D272A85D300863F68 /* MyInfoViewModel.swift */; };
+		72CD1922272A8DEA00863F68 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD1921272A8DEA00863F68 /* ImagePickerDelegate.swift */; };
 		DDE17E176BBA65E3DCFC9B8A /* Pods_WhoHello.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379749B6A5685C69AFFE9100 /* Pods_WhoHello.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +56,12 @@
 		72921144271E8AA900F69D89 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		72921146271E8D6500F69D89 /* ActionLogicEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLogicEnum.swift; sourceTree = "<group>"; };
 		7292114A271E972D00F69D89 /* heartlottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = heartlottie.json; path = ../../../../Downloads/heartlottie.json; sourceTree = "<group>"; };
+		72CD1914272A756C00863F68 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
+		72CD1916272A781E00863F68 /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
+		72CD1919272A840F00863F68 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
+		72CD191B272A841D00863F68 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
+		72CD191D272A85D300863F68 /* MyInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewModel.swift; sourceTree = "<group>"; };
+		72CD1921272A8DEA00863F68 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
 		B6AD5355CA683DFDDF18C3EF /* Pods-WhoHello.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoHello.debug.xcconfig"; path = "Target Support Files/Pods-WhoHello/Pods-WhoHello.debug.xcconfig"; sourceTree = "<group>"; };
 		BCA572C6C3FE7A3CC67618AE /* Pods-WhoHello.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoHello.release.xcconfig"; path = "Target Support Files/Pods-WhoHello/Pods-WhoHello.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				7267F866272959F2007D3432 /* FriendViewController.swift */,
+				72CD1914272A756C00863F68 /* FriendView.swift */,
+				72CD1916272A781E00863F68 /* FriendViewModel.swift */,
 			);
 			path = myfriend;
 			sourceTree = "<group>";
@@ -116,6 +130,8 @@
 		727FF1A3271E78B000BD2524 /* WhoHello */ = {
 			isa = PBXGroup;
 			children = (
+				72CD191F272A8DDA00863F68 /* common */,
+				72CD1918272A816A00863F68 /* myinfo */,
 				7267F865272956A8007D3432 /* myfriend */,
 				7267F8602729550D007D3432 /* look */,
 				7267F85127293480007D3432 /* login */,
@@ -148,6 +164,32 @@
 				72921144271E8AA900F69D89 /* IntroViewModel.swift */,
 			);
 			path = intro;
+			sourceTree = "<group>";
+		};
+		72CD1918272A816A00863F68 /* myinfo */ = {
+			isa = PBXGroup;
+			children = (
+				72CD1919272A840F00863F68 /* MyInfoViewController.swift */,
+				72CD191B272A841D00863F68 /* MyInfoView.swift */,
+				72CD191D272A85D300863F68 /* MyInfoViewModel.swift */,
+			);
+			path = myinfo;
+			sourceTree = "<group>";
+		};
+		72CD191F272A8DDA00863F68 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				72CD1920272A8DE000863F68 /* delegate */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		72CD1920272A8DE000863F68 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				72CD1921272A8DEA00863F68 /* ImagePickerDelegate.swift */,
+			);
+			path = delegate;
 			sourceTree = "<group>";
 		};
 		CD864E63A52491AA5861903B /* Frameworks */ = {
@@ -285,16 +327,22 @@
 				7267F8532729348C007D3432 /* LoginViewController.swift in Sources */,
 				7267F86227295517007D3432 /* LookView.swift in Sources */,
 				7267F85F27295508007D3432 /* LookViewController.swift in Sources */,
+				72CD191A272A840F00863F68 /* MyInfoViewController.swift in Sources */,
+				72CD1922272A8DEA00863F68 /* ImagePickerDelegate.swift in Sources */,
+				72CD191C272A841D00863F68 /* MyInfoView.swift in Sources */,
 				72921143271E896A00F69D89 /* IntroView.swift in Sources */,
+				72CD1917272A781E00863F68 /* FriendViewModel.swift in Sources */,
 				7267F86427295557007D3432 /* LookViewModel.swift in Sources */,
 				7267F85D2729445C007D3432 /* GoogleLoginToken.swift in Sources */,
 				727FF1A9271E78B000BD2524 /* IntroViewController.swift in Sources */,
 				72921145271E8AA900F69D89 /* IntroViewModel.swift in Sources */,
 				727FF1BA271E883500BD2524 /* BaseClasses.swift in Sources */,
 				727FF1A5271E78B000BD2524 /* AppDelegate.swift in Sources */,
+				72CD191E272A85D300863F68 /* MyInfoViewModel.swift in Sources */,
 				7267F867272959F2007D3432 /* FriendViewController.swift in Sources */,
 				7267F8552729353A007D3432 /* LoginView.swift in Sources */,
 				72921147271E8D6500F69D89 /* ActionLogicEnum.swift in Sources */,
+				72CD1915272A756C00863F68 /* FriendView.swift in Sources */,
 				7267F85727293581007D3432 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

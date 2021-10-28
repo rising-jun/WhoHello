@@ -64,19 +64,11 @@ extension IntroViewController{
     }
     
     func presentVC(vcName: PresentVC){
-        switch vcName {
-            
-        case .intro:
-            //present(IntroViewController(), animated: true, completion: nil)
-        break
-        case .login:
+        if vcName == .login {
             loginVC.modalPresentationStyle = .fullScreen
             present(loginVC, animated: true, completion: nil)
-        break
-        case .look:
-            //present(IntroViewController(), animated: true, completion: nil)
-        break
         }
+        
     }
     
 }
