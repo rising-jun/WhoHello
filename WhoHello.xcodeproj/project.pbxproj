@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725A404E272BD06C006F3EAA /* ImageScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A404D272BD06C006F3EAA /* ImageScrollDelegate.swift */; };
 		7267F8532729348C007D3432 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F8522729348C007D3432 /* LoginViewController.swift */; };
 		7267F8552729353A007D3432 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F8542729353A007D3432 /* LoginView.swift */; };
 		7267F85727293581007D3432 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F85627293581007D3432 /* LoginViewModel.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		379749B6A5685C69AFFE9100 /* Pods_WhoHello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoHello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		725A404D272BD06C006F3EAA /* ImageScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollDelegate.swift; sourceTree = "<group>"; };
 		7267F8522729348C007D3432 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7267F8542729353A007D3432 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7267F85627293581007D3432 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		725A404F272BD1FF006F3EAA /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				725A404D272BD06C006F3EAA /* ImageScrollDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
 		7267F85127293480007D3432 /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 		72CD1918272A816A00863F68 /* myinfo */ = {
 			isa = PBXGroup;
 			children = (
+				725A404F272BD1FF006F3EAA /* delegate */,
 				72CD1919272A840F00863F68 /* MyInfoViewController.swift */,
 				72CD191B272A841D00863F68 /* MyInfoView.swift */,
 				72CD191D272A85D300863F68 /* MyInfoViewModel.swift */,
@@ -325,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7267F8532729348C007D3432 /* LoginViewController.swift in Sources */,
+				725A404E272BD06C006F3EAA /* ImageScrollDelegate.swift in Sources */,
 				7267F86227295517007D3432 /* LookView.swift in Sources */,
 				7267F85F27295508007D3432 /* LookViewController.swift in Sources */,
 				72CD191A272A840F00863F68 /* MyInfoViewController.swift in Sources */,

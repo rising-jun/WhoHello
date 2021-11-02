@@ -20,22 +20,10 @@ enum PresentVC{
     case look
     case myInfo
     case friend
+    case imagePicker
 }
 
 enum ViewState{
     case viewDidLoad
     case viewWillAppear
 }
-
-//enum IntroLogic: Any{
-//    case prepareView
-//    case nextView
-//    case none
-//}
-//
-//enum IntroAction: Any{
-//    case timeDone
-//    case viewDidLoad
-//    case none
-//}
-//

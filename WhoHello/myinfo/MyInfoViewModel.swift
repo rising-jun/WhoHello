@@ -40,6 +40,17 @@ final class MyInfoViewModel: ViewModelType{
             }.bind(to: self.state)
             .disposed(by: disposeBag)
         
+        input.imageTouched?
+            .withLatestFrom(state)
+            .map{
+                var newState = $0
+                newState.presentVC = .imagePicker
+                return newState
+            }.bind(to: self.state)
+            .disposed(by: disposeBag)
+        
+        
+        
         
         output = Output(state: state.asDriver())
         return output!
@@ -50,7 +61,7 @@ final class MyInfoViewModel: ViewModelType{
 struct MyInfoState{
     var presentVC: PresentVC?
     var viewLogic: ViewLogic?
-    
+    var imagePicker: Void?
     
 }
 
